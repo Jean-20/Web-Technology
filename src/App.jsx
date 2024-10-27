@@ -1,16 +1,17 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Header from './Components/Header';
-import Footer from './Components/Footer';
+import Header from './pages/Header';
+import Footer from './pages/Footer';
 import AboutUs from './pages/AboutUs';
 import ContactUs from './pages/ContactUs';
 import Login from './pages/Login';
 import Register from './pages/Register';
-import Phones from './pages/Phones';
-import Computing from './pages/Computing';
-import Gaming from './pages/Gaming';
-import Pccomps from './pages/Pccomps';
+import Phones from './Components/Products/Phones';
+import Computing from './Components/Products/Computing';
+import Gaming from './Components/Products/Gaming';
+import Pccomps from './Components/Products/Pccomps';
 import Location from './pages/Locations';
 import Locations from './pages/Locations';
+import DetailsProducts from './Components/Products/DetailsProducts';
 import { Outlet } from 'react-router-dom';
 
 const App = () => {
@@ -18,8 +19,8 @@ const App = () => {
     <Router>
       <Routes>
         {/* Rutas que NO usan Header y Footer */}
-        <Route path="/login" element={<Login />} /> {/* Ruta de Login */}
-        <Route path="/register" element={<Register />} /> {/* Ruta de Register */}
+        <Route path="/login" element={<Login />} />
+        <Route path="/register" element={<Register />} />
 
         {/* Rutas que SÍ usan Header y Footer */}
         <Route element={<Layout />}>
@@ -30,6 +31,7 @@ const App = () => {
           <Route path="/phones" element={<Phones />} />
           <Route path="/gaming" element={<Gaming />} />
           <Route path="/pc" element={<Pccomps />} />
+          <Route path="/Details" element={<DetailsProducts />} />
           <Route path="*" element={<NotFound />} />
         </Route>
       </Routes>

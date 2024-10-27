@@ -39,7 +39,7 @@ const ContactUs = () => {
             type="tel"
             className="form-input mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:border-blue-500 focus:ring focus:ring-blue-500 focus:ring-opacity-50 py-3 text-black"
             id="telefono"
-            maxLength={9}  // Limitar a 9 dígitos
+            maxLength={9}
             required
           />
         </div>
@@ -52,7 +52,7 @@ const ContactUs = () => {
           >
             <option selected disabled value="">Elige...</option>
             <option>Lima</option>
-            {/* Agrega más opciones aquí si es necesario */}
+            {/* Agregar más opciones  */}
           </select>
         </div>
         <div className="col-span-2">
