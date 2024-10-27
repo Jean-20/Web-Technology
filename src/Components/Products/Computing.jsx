@@ -28,7 +28,7 @@ const Computing = () => {
     return (
         <div className="flex justify-center items-center min-h-screen mt-20">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-[1200px] mx-auto">
-                {ComputingData.map((item) => ( // Cambiado a "ComputingData"
+                {ComputingData.map((item) => (
                     <div
                         key={item.id}
                         className="relative flex flex-col text-gray-700 bg-white shadow-md bg-clip-border rounded-xl w-full transform transition-transform duration-300 hover:scale-105"
