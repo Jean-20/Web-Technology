@@ -11,7 +11,9 @@ const DetailsProducts = () => {
     }
 
     const increaseQuantity = () => {
-        setQuantity(quantity + 1);
+        if (quantity < product.stock) {
+            setQuantity(quantity + 1);
+        }
     };
 
     const decreaseQuantity = () => {
@@ -21,19 +23,20 @@ const DetailsProducts = () => {
     };
 
     return (
-        <div className="flex justify-center items-center min-h-screen mt-20">
+        <div className="flex justify-center items-center min-h-screen">
             <div className="flex flex-col md:flex-row max-w-4xl w-full bg-white shadow-lg rounded-lg overflow-hidden">
                 {/* Imagen del producto */}
                 <div className="md:w-1/2">
-                    <img src={product.image} alt={product.title} className="object-cover w-full h-full" />
+                    <img src={product.url} alt={product.nombre} className="object-cover w-full h-full" />
                 </div>
 
                 {/* Detalles del producto */}
                 <div className="p-6 flex flex-col justify-between md:w-1/2">
                     <div>
-                        <h2 className="text-2xl font-bold text-gray-800">{product.title}</h2>
-                        <p className="text-gray-600 mt-2">{product.description}</p>
-                        <p className="text-xl font-semibold text-green-500 mt-4">{product.price}</p>
+                        <h2 className="text-2xl font-bold text-gray-800">{product.nombre}</h2>
+                        <p className="text-gray-600 mt-2">{product.descripcion}</p>
+                        <p className="text-xl font-semibold text-green-500 mt-4">{product.precio}</p>
+                        <p className="text-gray-500 mt-2">Stock disponible: {product.stock}</p>
                     </div>
 
                     {/* Controles de cantidad y botón de añadir al carrito */}

@@ -1,36 +1,47 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 
-// Asegúrate de que los datos se llamen PccompsData en lugar de computingData
 const PccompsData = [
     {
         id: 1,
-        title: "NVIDIA GeForce RTX 3080",
-        price: "$699.00",
-        description: "Ultimate performance with real-time ray tracing and AI-enhanced graphics.",
-        image: "https://images.unsplash.com/photo-1601916250322-df5f7ca9bf65?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1160&q=80"
+        nombre: "PlayStation 5",
+        categoria: "componentes",
+        marca: "Sony",
+        precio: "$499.00",
+        stock: "10",
+        descripcion: "Ultra-high speed SSD, 8K support, and haptic feedback with DualSense controller.",
+        url: "https://images.unsplash.com/photo-1606818275817-7365c37cd437?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1160&q=80"
     },
     {
-        id: 2,
-        title: "Intel Core i9-12900K",
-        price: "$599.00",
-        description: "High-performance 16-core CPU with turbo boost up to 5.2 GHz.",
-        image: "https://images.unsplash.com/photo-1620571304179-c6bfff1c8091?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1160&q=80"
+        id: 1,
+        nombre: "PlayStation 5",
+        categoria: "componentes",
+        marca: "Sony",
+        precio: "$499.00",
+        stock: "10",
+        descripcion: "Ultra-high speed SSD, 8K support, and haptic feedback with DualSense controller.",
+        url: "https://images.unsplash.com/photo-1606818275817-7365c37cd437?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1160&q=80"
     },
     {
-        id: 3,
-        title: "Corsair Vengeance RGB Pro 32GB",
-        price: "$179.99",
-        description: "High-speed DDR4 RAM with dynamic multi-zone RGB lighting.",
-        image: "https://images.unsplash.com/photo-1618435554187-42ba16e7e5a2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1160&q=80"
+        id: 1,
+        nombre: "PlayStation 5",
+        categoria: "componentes",
+        marca: "Sony",
+        precio: "$499.00",
+        stock: "10",
+        descripcion: "Ultra-high speed SSD, 8K support, and haptic feedback with DualSense controller.",
+        url: "https://images.unsplash.com/photo-1606818275817-7365c37cd437?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1160&q=80"
     },
     {
-        id: 4,
-        title: "Samsung 980 Pro SSD 1TB",
-        price: "$229.99",
-        description: "PCIe 4.0 NVMe SSD for blazing-fast read and write speeds.",
-        image: "https://images.unsplash.com/photo-1629228363045-1b0679e1b820?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1160&q=80"
-    }
+        id: 1,
+        nombre: "PlayStation 5",
+        categoria: "componentes",
+        marca: "Sony",
+        precio: "$499.00",
+        stock: "10",
+        descripcion: "Ultra-high speed SSD, 8K support, and haptic feedback with DualSense controller.",
+        url: "https://images.unsplash.com/photo-1606818275817-7365c37cd437?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1160&q=80"
+    },
 ];
 
 const Pccomps = () => {
@@ -51,22 +62,22 @@ const Pccomps = () => {
                     >
                         <div className="relative mx-4 mt-4 overflow-hidden text-gray-700 bg-white bg-clip-border rounded-xl h-96">
                             <img
-                                src={item.image}
-                                alt={item.title}
+                                src={item.url}
+                                alt={item.nombre}
                                 className="object-cover w-full h-full"
                             />
                         </div>
                         <div className="p-6">
                             <div className="flex items-center justify-between mb-2">
                                 <p className="block font-sans text-base font-medium text-blue-gray-900">
-                                    {item.title}
+                                    {item.nombre}
                                 </p>
                                 <p className="block font-sans text-base font-medium text-blue-gray-900">
-                                    {item.price}
+                                    {item.precio}
                                 </p>
                             </div>
                             <p className="block font-sans text-sm text-gray-700 opacity-75">
-                                {item.description}
+                                {item.descripcion}
                             </p>
                         </div>
                     </div>

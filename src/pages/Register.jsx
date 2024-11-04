@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
+import { useAuth } from '../Components/Home/AuthContext';
 
 const Register = () => {
     const [name, setName] = useState('');
@@ -7,6 +8,7 @@ const Register = () => {
     const [password, setPassword] = useState('');
     const [confirmPassword, setConfirmPassword] = useState('');
     const navigate = useNavigate();
+    const { login } = useAuth(); // Obtén la función de login desde el contexto
 
     const handleRegister = (e) => {
         e.preventDefault();
@@ -20,7 +22,9 @@ const Register = () => {
             return;
         }
 
-        navigate('/');
+        // Llama a login() del contexto para activar el estado de autenticación
+        login();
+        navigate('/'); // Redirige a la página principal o a la deseada
     };
 
     return (
